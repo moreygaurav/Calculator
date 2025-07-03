@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: url(img4.jpeg) no-repeat center center fixed;
+  /* background-size: cover; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #40a2bf;  
+}
+
+.main {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  width: 90%;
+  max-width: 320px;
+}
+
+.op {
+  width: 100%;
+  height: 70px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 32px;
+  border: 2px solid white;
+  padding: 10px;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.keys .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.keys input[type="button"] {
+  height: 60px;
+  width: 60px;
+  font-size: 24px;
+  border-radius: 15px;
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.keys input[type="button"]:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.oper {
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+
+@media (max-width: 500px) {
+  .main {
+    padding: 20px 15px;
+    max-width: 90%;
+  }
+
+  .keys .row {
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .keys input[type="button"] {
+    height: 55px;
+    width: 55px;
+    font-size: 20px;
+  }
+
+  .zero {
+    width: 50px;
+  }
+
+  .op {
+    height: 60px;
+    font-size: 26px;
+  }
+}
